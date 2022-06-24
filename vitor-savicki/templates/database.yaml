@@ -101,7 +101,7 @@ spec:
       action: publish:github:pull-request
       if: ${{ parameters.dryRun == false }}
       input:
-        repoUrl: github.com?repo=argo&owner=vitor-savicki
+        repoUrl: github.com?repo=heroku-deploy-example&owner=vitor-savicki
         branchName: create-${{ parameters.system }}-${{ parameters.env }}-db
         title: ':robot: [backstage-bot] Create ${{ parameters.system }}-${{ parameters.env }}-db'
         description: |

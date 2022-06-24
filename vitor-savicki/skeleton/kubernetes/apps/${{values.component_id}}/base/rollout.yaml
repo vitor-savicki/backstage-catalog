@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: heroku-deploy-exampleproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: ${{values.component_id}}
