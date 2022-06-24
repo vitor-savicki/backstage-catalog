@@ -85,7 +85,7 @@ spec:
       action: publish:github:pull-request
       if: ${{ parameters.dryRun == false }}
       input:
-        repoUrl: github.com?repo=backstage-catalog&owner=vitorsavicki
+        repoUrl: github.com?repo=backstage-catalog&owner=vitor-savicki
         branchName: create-${{ parameters.system }}
         title: ':robot: [backstage-bot] Create ${{ parameters.system }}'
         description: |
