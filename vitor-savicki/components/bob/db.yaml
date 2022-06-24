@@ -8,25 +8,25 @@ metadata:
     - database
     - data
   links:
-    - url: https://bob.devxp.com/user
+    - url: https://bob.vitor-savicki.com/user
       title: Examples Users
       icon: user
-    - url: https://bob.devxp.com/group
+    - url: https://bob.vitor-savicki.com/group
       title: Example Group
       icon: group
-    - url: https://bob.devxp.com/cloud
+    - url: https://bob.vitor-savicki.com/cloud
       title: Link with Cloud Icon
       icon: cloud
-    - url: https://bob.devxp.com/dashboard
+    - url: https://bob.vitor-savicki.com/dashboard
       title: Dashboard
       icon: dashboard
-    - url: https://bob.devxp.com/help
+    - url: https://bob.vitor-savicki.com/help
       title: Support
       icon: help
-    - url: https://bob.devxp.com/web
+    - url: https://bob.vitor-savicki.com/web
       title: Website
       icon: web
-    - url: https://bob.devxp.com/alert
+    - url: https://bob.vitor-savicki.com/alert
       title: Alerts
       icon: alert
 spec:

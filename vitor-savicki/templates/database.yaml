@@ -90,7 +90,7 @@ spec:
       if: ${{ parameters.dryRun == false }}
       input:
         targetPath: ./rds
-        url: https://github.com/vitor-savicki/backstage-catalog/tree/main/devxp/skeleton/crossplane/rds
+        url: https://github.com/vitor-savicki/backstage-catalog/tree/main/vitor-savicki/skeleton/crossplane/rds
         values:
           system: ${{ parameters.system }}
           owner: ${{ parameters.owner }}

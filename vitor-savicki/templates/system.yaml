@@ -62,7 +62,7 @@ spec:
       if: ${{ parameters.dryRun == false }}
       input:
         targetPath: ./s3
-        url: https://github.com/vitor-savicki/backstage-catalog/tree/main/devxp/skeleton/crossplane/s3
+        url: https://github.com/vitor-savicki/backstage-catalog/tree/main/vitor-savicki/skeleton/crossplane/s3
         values:
           system: ${{ parameters.system }}
           owner: ${{ parameters.owner }}
