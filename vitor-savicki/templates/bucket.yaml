@@ -1,45 +1,36 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: bucket-template
-  title: S3 Bucket Template
-  description: Create a S3 Bucket on AWS
-
+  name: system-template
+  title: Create New System
+  description: Create a System from  template
   tags:
-    - aws
-    - s3
-    - infrastructure
-    - bucket
-    - resource
+    - system
 spec:
   owner: group:sre-team
-  type: resource
+  type: system
 
   parameters:
-    - title: Provide some simple information
+    - title: Provide System simple information
       required:
         - system
-        - lifecycle
+        - description
         - owner
+        - domain
+        - lifecycle
       properties:
         system:
-          title: System
+          title: Name
           type: string
-          description: System of the component
-          ui:field: EntityPicker
-          ui:options:
-            allowedKinds:
-              - System
-            defaultKind: System
-        # component:
-        #   title: Component
-        #   type: string
-        #   description: Component to create resource
-        #   ui:field: EntityPicker
-        #   ui:options:
-        #     allowedKinds:
-        #       - Component
-        #     defaultKind: Component
+          description: Unique name of the System
+          ui:field: EntityNamePicker
+          ui:autofocus: true
+
+        description:
+          title: Description
+          type: string
+          description: Help others understand what this website is for.
+
         owner:
           title: Owner
           type: string
@@ -48,6 +39,17 @@ spec:
           ui:options:
             allowedKinds:
               - Group
+
+        domain:
+          title: Domain
+          type: string
+          description: Domain of the System
+          ui:field: EntityPicker
+          ui:options:
+            allowedKinds:
+              - Domain
+            defaultKind: Domain
+
         lifecycle:
           title: Lifecycle
           description: 'Application lifecycle'
@@ -58,57 +60,39 @@ spec:
             - experimental
             - production
 
-
-    - title: Infrastructure
-      properties:
-        env:
-          title: Environment
-          description: 'Environment to create resources'
-          type: string
-          default: dev
-          enum:
-            - dev
-            - stg
-            - prd
-        bucket:
-          title: bucket Parameters
-          type: object
-          default: Postgres
-          properties:
-            type:
-              enum:
-              - MySQL
-              - Postgres
         dryRun:
           title: Only perform a dry run, don't publish anything
           type: boolean
           default: false
+
   steps:
     - id: fetch-template
-      name: Fetch RDS Templates
+      name: Fetch System Templates
       action: fetch:template
       if: ${{ parameters.dryRun == false }}
       input:
-        targetPath: ./s3
-        url: https://github.com/vitor-savicki/backstage-catalog/tree/main/vitor-savicki/skeleton/crossplane/s3
+        targetPath: ./system
+        url: https://github.com/vitor-savicki/backstage-catalog/tree/main/vitor-savicki/skeleton/system
         values:
           system: ${{ parameters.system }}
+          description: ${{ parameters.description }}
           owner: ${{ parameters.owner }}
-          env: ${{ parameters.env }}
+          domain: ${{ parameters.domain }}
+          lifecycle: ${{ parameters.lifecycle }}
 
     - id: open-pr
-      name: "Open PR in GitOps Repository"
+      name: "Open PR on Backstage Catalog"
       action: publish:github:pull-request
       if: ${{ parameters.dryRun == false }}
       input:
-        repoUrl: github.com?repo=heroku-deploy-example&owner=vitor-savicki
-        branchName: create-${{ parameters.system }}-${{ parameters.env }}-s3
-        title: ':robot: [backstage-bot] Create ${{ parameters.system }}-${{ parameters.env }}-s3'
+        repoUrl: github.com?repo=backstage-catalog&owner=vitorsavicki
+        branchName: create-${{ parameters.system }}
+        title: ':robot: [backstage-bot] Create ${{ parameters.system }}'
         description: |
           # New project: ${{ parameters.system }}
           ${{ parameters.description if parameters.description }}
-        sourcePath: s3
-        targetPath: apps
+        sourcePath: system
+        targetPath: vitor-savicki/systems
 
     # - id: register
     #   name: Register Application in Catalog
