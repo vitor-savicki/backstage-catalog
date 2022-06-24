@@ -73,7 +73,7 @@ spec:
       action: publish:github:pull-request
       if: ${{ parameters.dryRun == false }}
       input:
-        repoUrl: github.com?repo=heroku-deploy-example&owner=vitor-savicki
+        repoUrl: github.com?repo=heroku-deploy-example&owner=vitorsavicki
         branchName: create-${{ parameters.system }}-${{ parameters.env }}-s3
         title: ':robot: [backstage-bot] Create ${{ parameters.system }}-${{ parameters.env }}-s3'
         description: |
