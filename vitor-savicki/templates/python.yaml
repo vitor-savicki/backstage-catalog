@@ -52,7 +52,7 @@ spec:
       name: Fetch Skeleton + Template
       action: fetch:template
       input:
-        url: https://github.com/diegoluisi/devspace-python
+        url: https://github.com/vitor-savicki/devspace-python
         #copyWithoutRender:
         #  - .github/workflows/*
         values:

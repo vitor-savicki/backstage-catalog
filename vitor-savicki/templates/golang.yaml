@@ -157,7 +157,7 @@ spec:
       action: publish:github:pull-request
       if: ${{ parameters.kube == true }}
       input:
-        repoUrl: github.com?repo=argo&owner=diegoluisi
+        repoUrl: github.com?repo=argo&owner=vitor-savicki
         branchName: create-${{ parameters.component_id }}
         title: ':robot: [backstage-bot] Create new App ${{ parameters.component_id }}'
         description: |

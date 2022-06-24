@@ -5,7 +5,7 @@ metadata:
   description: Backoficce Api
 
   # annotations:
-    # github.com/project-slug: diegoluisi/bob-web
+    # github.com/project-slug: vitor-savicki/bob-web
     # backstage.io/techdocs-ref: value
   tags:
     - web

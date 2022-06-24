@@ -10,7 +10,7 @@ spec:
   gateways:
   - istio-system/istio-gateway
   hosts:
-  - ${{values.component_id}}.diegoluisi.eti.br
+  - ${{values.component_id}}.vitor-savicki.eti.br
   http:
   - match:
     - uri:

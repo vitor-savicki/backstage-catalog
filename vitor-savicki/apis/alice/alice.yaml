@@ -10,7 +10,7 @@ spec:
   system: alice
   owner: group:dev-team
   providesApis:
-    - alice.diegoluisi.eti.br/v1
+    - alice.vitor-savicki.eti.br/v1
   definition: |
     openapi: "3.0.0"
     info:

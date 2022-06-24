@@ -8,7 +8,7 @@ metadata:
     - backoffice
     - php
   # annotations:
-  #   github.com/project-slug: diegoluisi/bob
+  #   github.com/project-slug: vitor-savicki/bob
 spec:
   type: system
   owner: group:dev-team

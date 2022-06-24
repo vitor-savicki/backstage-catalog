@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ${{values.component_id}}
-        image: diegoluisi/${{values.component_id}}:latest
+        image: vitor-savicki/${{values.component_id}}:latest
         imagePullPolicy: Always
         ports:
         - name: http

@@ -7,7 +7,7 @@ metadata:
     - ${{values.system}}
     - ${{values.domain}}
   links:
-    - url: https://${{values.system}}.diegoluisi.eti.br
+    - url: https://${{values.system}}.vitor-savicki.eti.br
       title: System
       icon: dashboard
   annotations:

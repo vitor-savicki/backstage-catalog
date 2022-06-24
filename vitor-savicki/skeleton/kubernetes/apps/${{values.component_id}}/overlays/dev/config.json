@@ -4,7 +4,7 @@
   "destNamespace": "${{values.component_id}}",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": "apps/${{values.component_id}}/overlays/dev",
-  "srcRepoURL": "https://github.com/diegoluisi/argo.git",
+  "srcRepoURL": "https://github.com/vitor-savicki/argo.git",
   "srcTargetRevision": "",
   "CreateNamespace": true,
   "labels": null

@@ -7,7 +7,7 @@ metadata:
     - backstage
     - idp
   links:
-    - url: https://backstage.diegoluisi.eti.br
+    - url: https://backstage.vitor-savicki.eti.br
       title: Backstage
       icon: dashboard
   annotations:

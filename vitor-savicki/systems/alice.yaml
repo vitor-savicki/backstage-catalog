@@ -8,7 +8,7 @@ metadata:
     - frontend
     - php
   annotations:
-    github.com/project-slug: diegoluisi/alice
+    github.com/project-slug: vitor-savicki/alice
 spec:
   type: website
   owner: group:dev-team
