@@ -1,19 +1,19 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: devxp-tech
-  description: DevXP Technology
+  name: vitor-savicki
+  description: vitor-savicki
 
   links:
-    - url: http://www.devxp-tech.io/
+    - url: http://www.vitor-savicki.io/
       title: Website
-    - url: https://devxp-tech.local/wiki/
+    - url: https://vitor-savickilocal/wiki/
       title: Intranet
 spec:
   type: organization
   profile:
-    displayName: DevXP Tech
-    email: it@devxp.io
+    displayName: vitor-savicki
+    email: it@victor-savicki.io
     # picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
   children: [group:engineering]
 

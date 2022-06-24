@@ -11,7 +11,7 @@ metadata:
       title: Backstage
       icon: dashboard
   annotations:
-    github.com/project-slug: devxp-tech/backstage
+    github.com/project-slug: vitor-savicki/backstage
     backstage.io/kubernetes-namespace: backstage
 spec:
   type: system

@@ -11,7 +11,7 @@ metadata:
       title: System
       icon: dashboard
   annotations:
-    github.com/project-slug: devxp-tech/${{values.system}}
+    github.com/project-slug: vitor-savicki/${{values.system}}
     backstage.io/kubernetes-namespace: ${{values.system}}
 spec:
   type: system
